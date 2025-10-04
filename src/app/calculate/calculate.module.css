@@ -1,0 +1,100 @@
+.calculatePage {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #E8DAEF 0%, #D6EAF8 100%);
+  padding: 4rem 0 3rem;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--color-gray-700);
+  line-height: 1.8;
+}
+
+/* Form Section */
+.formSection {
+  padding: 4rem 0;
+  background-color: var(--color-white);
+}
+
+/* Info Section */
+.infoSection {
+  padding: 3rem 0 4rem;
+  background-color: var(--color-gray-100);
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.infoCard {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.infoIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.infoCard h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-gray-900);
+}
+
+.infoCard p {
+  font-size: 0.95rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .formSection {
+    padding: 3rem 0;
+  }
+
+  .infoSection {
+    padding: 2rem 0 3rem;
+  }
+
+  .infoGrid {
+    gap: 1.5rem;
+  }
+}

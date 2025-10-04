@@ -1,0 +1,67 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Defs for gradients -->
+  <defs>
+    <!-- Primary gradient (purple to blue) -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9B59B6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3498DB;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Accent gradient (gold) -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F39C12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8B923;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Outer Circle (Sacred Geometry) -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#primaryGradient)" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Middle Circle -->
+  <circle cx="100" cy="100" r="75" fill="none" stroke="url(#primaryGradient)" stroke-width="1.5" opacity="0.5"/>
+  
+  <!-- Inner Sacred Geometry Pattern -->
+  <!-- Hexagon -->
+  <path d="M 100 35 L 143.3 60 L 143.3 110 L 100 135 L 56.7 110 L 56.7 60 Z" 
+        fill="none" stroke="url(#accentGradient)" stroke-width="2" opacity="0.4"/>
+  
+  <!-- Star of David / Merkaba -->
+  <path d="M 100 45 L 115 75 L 145 75 L 122.5 92 L 130 120 L 100 102 L 70 120 L 77.5 92 L 55 75 L 85 75 Z" 
+        fill="url(#primaryGradient)" opacity="0.2" stroke="url(#primaryGradient)" stroke-width="1.5"/>
+  
+  <!-- Central Number "∞" (Infinity - represents eternal numerology) -->
+  <g filter="url(#glow)">
+    <!-- Infinity symbol -->
+    <path d="M 65 100 Q 75 85 85 100 Q 95 115 100 100 Q 105 85 115 100 Q 125 115 135 100 Q 125 85 115 100 Q 105 115 100 100 Q 95 85 85 100 Q 75 115 65 100 Z" 
+          fill="url(#accentGradient)" stroke="url(#accentGradient)" stroke-width="1"/>
+  </g>
+  
+  <!-- Mystical Dots (Energy Points) -->
+  <circle cx="100" cy="35" r="3" fill="url(#accentGradient)"/>
+  <circle cx="143.3" cy="60" r="3" fill="url(#accentGradient)"/>
+  <circle cx="143.3" cy="110" r="3" fill="url(#accentGradient)"/>
+  <circle cx="100" cy="135" r="3" fill="url(#accentGradient)"/>
+  <circle cx="56.7" cy="110" r="3" fill="url(#accentGradient)"/>
+  <circle cx="56.7" cy="60" r="3" fill="url(#accentGradient)"/>
+  
+  <!-- Sacred Numbers around the circle -->
+  <text x="100" y="25" text-anchor="middle" font-family="'Cinzel', serif" font-size="14" font-weight="600" fill="url(#primaryGradient)">1</text>
+  <text x="155" y="70" text-anchor="middle" font-family="'Cinzel', serif" font-size="14" font-weight="600" fill="url(#primaryGradient)">3</text>
+  <text x="155" y="130" text-anchor="middle" font-family="'Cinzel', serif" font-size="14" font-weight="600" fill="url(#primaryGradient)">6</text>
+  <text x="100" y="175" text-anchor="middle" font-family="'Cinzel', serif" font-size="14" font-weight="600" fill="url(#primaryGradient)">9</text>
+  <text x="45" y="130" text-anchor="middle" font-family="'Cinzel', serif" font-size="14" font-weight="600" fill="url(#primaryGradient)">7</text>
+  <text x="45" y="70" text-anchor="middle" font-family="'Cinzel', serif" font-size="14" font-weight="600" fill="url(#primaryGradient)">5</text>
+  
+  <!-- Center Ornament -->
+  <circle cx="100" cy="100" r="8" fill="none" stroke="url(#accentGradient)" stroke-width="2"/>
+  <circle cx="100" cy="100" r="4" fill="url(#accentGradient)"/>
+</svg>

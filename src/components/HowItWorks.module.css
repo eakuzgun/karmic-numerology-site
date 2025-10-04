@@ -1,0 +1,153 @@
+.howItWorks {
+  background: linear-gradient(135deg, #F4F6F7 0%, #E8DAEF 100%);
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 1rem;
+  color: var(--color-gray-900);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--color-gray-600);
+}
+
+/* Steps Container */
+.stepsContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stepWrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Step Card */
+.step {
+  flex: 1;
+  background-color: var(--color-white);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateY(40px) scale(0.9);
+  border: 2px solid transparent;
+}
+
+.step.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.step:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--color-primary);
+  box-shadow: 0 20px 40px rgba(155, 89, 182, 0.25);
+}
+
+/* Step Number */
+.stepNumber {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-white);
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(155, 89, 182, 0.3);
+  transition: all 0.4s ease;
+}
+
+.step:hover .stepNumber {
+  transform: scale(1.15) rotate(360deg);
+}
+
+/* Step Content */
+.stepTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-gray-900);
+}
+
+.stepDescription {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-gray-700);
+}
+
+/* Connector Line */
+.connector {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  position: relative;
+  flex-shrink: 0;
+  margin: 0 1rem;
+}
+
+.connector::after {
+  content: '→';
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .stepsContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stepWrapper {
+    flex-direction: column;
+  }
+
+  .connector {
+    width: 3px;
+    height: 50px;
+    margin: 1rem auto;
+  }
+
+  .connector::after {
+    content: '↓';
+    right: 50%;
+    top: auto;
+    bottom: -12px;
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 640px) {
+  .step {
+    padding: 2rem 1.5rem;
+  }
+
+  .header {
+    margin-bottom: 3rem;
+  }
+}
